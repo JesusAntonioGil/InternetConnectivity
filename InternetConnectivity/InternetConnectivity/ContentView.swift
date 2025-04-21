@@ -7,15 +7,20 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @Environment(\.isNetworkConnected) private var isConnected
+    @Environment(\.connectionType) private var connectionType
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                Section("Status") {
+                    
+                }
+            }
         }
-        .padding()
     }
 }
 
